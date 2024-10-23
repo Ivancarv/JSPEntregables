@@ -25,7 +25,7 @@ function listaProducto() {
 
 
 function buscarProducto() {
-  let ProducBuscado = prompt("Ingresa el nombre de la fruta que quieres buscar:");
+  let ProducBuscado = prompt("Ingresa el nombre de los productos que quieras buscar:");
   if (Productos.includes(ProducBuscado)) {
     alert(ProducBuscado + " está disponible.");
   } else {
