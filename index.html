@@ -4,21 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikimchis3D</title>
+    <title>Ikimchis3D - E-Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        .producto {
+            margin: 10px 0;
+        }
+        .producto button {
+            margin-left: 10px;
+        }
+        #carrito {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Productos</h1>
+    <h1>Productos Disponibles</h1>
 
-    <button onclick="saludar()">Bienvenida</button>
-    <button onclick="listaProducto()">Productos</button>
-    <button onclick="buscarProducto()">Buscar producto</button>
-    <button onclick="CantidadProducto()">Cantidad de productos</button>
+    <div id="productos"></div>
 
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="carritoList"></ul>
+        <p id="totalCarrito">Total: $0</p>
+        <button id="finalizarCompraBtn">Finalizar Compra</button>
+    </div>
+
+    <div id="formularioCompra" style="display: none;">
+        <h2>Finaliza tu compra</h2>
+        <form id="compraForm">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" required>
+            <label for="direccion">Dirección: </label>
+            <input type="text" id="direccion" required>
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 
-<script src="script.js" defer></script>
-
 </html>
+
 
 
