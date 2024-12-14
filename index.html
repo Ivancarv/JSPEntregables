@@ -5,22 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikimchis3D - E-Commerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 10px;
         }
+
         .producto {
             margin: 10px 0;
         }
+
         .producto button {
             margin-left: 10px;
         }
+
         #carrito {
             margin-top: 30px;
         }
+
+        .carrito-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cantidad-control {
+            display: flex;
+            align-items: center;
+        }
+
+        .cantidad-control button {
+            margin: 0 5px;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
@@ -30,7 +51,7 @@
 
     <div id="carrito">
         <h2>Carrito de Compras</h2>
-        <ul id="carritoList"></ul>
+        <div id="carritoList"></div>
         <p id="totalCarrito">Total: $0</p>
         <button id="finalizarCompraBtn">Finalizar Compra</button>
     </div>
@@ -50,6 +71,3 @@
 </body>
 
 </html>
-
-
-
